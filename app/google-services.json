@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "620913675760",
+    "firebase_url": "https://creditmantriinternalsapp.firebaseio.com",
+    "project_id": "creditmantriinternalsapp",
+    "storage_bucket": "creditmantriinternalsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620913675760:android:5018a8e437ba8d39",
+        "android_client_info": {
+          "package_name": "com.creditmantri.creditmantriinternals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620913675760-v0pbks8t4bbno02c88kk2sm58kefgre3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLg5HbtsiWPxKfXyla3_qJM8XzOzqLack"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620913675760-v0pbks8t4bbno02c88kk2sm58kefgre3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620913675760:android:3805db09a50ccb6862a135",
+        "android_client_info": {
+          "package_name": "com.e.itineraryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620913675760-22g41p8d1msl2vc5actih9bc4ibdks0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.itineraryapp",
+            "certificate_hash": "f60f3ac03e919ad500dc8807cc37bedf0200590c"
+          }
+        },
+        {
+          "client_id": "620913675760-v0pbks8t4bbno02c88kk2sm58kefgre3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLg5HbtsiWPxKfXyla3_qJM8XzOzqLack"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620913675760-v0pbks8t4bbno02c88kk2sm58kefgre3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
