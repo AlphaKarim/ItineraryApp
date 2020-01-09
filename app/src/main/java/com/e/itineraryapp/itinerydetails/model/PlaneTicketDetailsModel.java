@@ -1,17 +1,19 @@
 package com.e.itineraryapp.itinerydetails.model;
 
+import com.e.itineraryapp.itinerydetails.presenter.ItineraryDetailsListener;
+
 public class PlaneTicketDetailsModel {
     String arraival;
     String destination;
     String arraivalTime;
-    String destinationTime;
+    String departureTime;
     int ticketNumber;
 
-    public PlaneTicketDetailsModel(String arraival, String destination, String arraivalTime, String destinationTime, int ticketNumber) {
+    public PlaneTicketDetailsModel(String arraival, String destination, String arraivalTime, String departureTime, int ticketNumber) {
         this.arraival = arraival;
         this.destination = destination;
         this.arraivalTime = arraivalTime;
-        this.destinationTime = destinationTime;
+        this.departureTime = departureTime;
         this.ticketNumber = ticketNumber;
     }
 
@@ -39,12 +41,12 @@ public class PlaneTicketDetailsModel {
         this.arraivalTime = arraivalTime;
     }
 
-    public String getDestinationTime() {
-        return destinationTime;
+    public String getDepartureTime() {
+        return departureTime;
     }
 
-    public void setDestinationTime(String destinationTime) {
-        this.destinationTime = destinationTime;
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
     }
 
     public int getTicketNumber() {
@@ -53,5 +55,18 @@ public class PlaneTicketDetailsModel {
 
     public void setTicketNumber(int ticketNumber) {
         this.ticketNumber = ticketNumber;
+    }
+
+
+    class sendData implements ItineraryDetailsListener {
+
+
+
+        @Override
+        public void sendTicketDetails(PlaneTicketDetailsModel planeTicketDetailsModel) {
+
+        }
+
+        //API call
     }
 }

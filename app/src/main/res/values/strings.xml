@@ -5,4 +5,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_your_ticket_number">Enter your ticket Number :</string>
+    <string name="number">Number :</string>
+    <string name="totime">ToTime</string>
+    <string name="fromtime">fromTime</string>
+    <string name="arrival_time">Arrival Time</string>
+    <string name="arrival">Arrival</string>
+    <string name="departure_time">Departure Time</string>
+    <string name="departure">Departure</string>
+    <string name="select_type_of_route">Select Type of route</string>
+    <string name="done">Done</string>
+    <string name="enter_your_info_number">Enter your info number</string>
+    <string name="timings">Timings :</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
 </resources>

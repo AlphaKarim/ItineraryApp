@@ -11,14 +11,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.e.itineraryapp.R;
+import com.e.itineraryapp.itinerydetails.model.PlaneData;
+import com.e.itineraryapp.itinerydetails.model.PlaneTicketDetailsModel;
+import com.e.itineraryapp.itinerydetails.presenter.ItineraryDetailsListener;
 
-public class ItineryDetailsActivity extends AppCompatActivity {
+public class ItineryDetailsActivity extends AppCompatActivity implements ItineraryDetailsListener {
 
-    ImageView addDetails;
-    RecyclerView itineraryRV;
+    public ImageView addDetails;
     FrameLayout frame_container;
+    ChooseTypeFragment chooseTypeFragment;
+    DetailsShowFragment detailsShowFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +34,15 @@ public class ItineryDetailsActivity extends AppCompatActivity {
     }
     public void initializeViews(){
         addDetails = findViewById(R.id.addButton);
-        itineraryRV = findViewById(R.id.itineraryRV);
         frame_container = findViewById(R.id.frame_container);
+        detailsShowFragment = new DetailsShowFragment();
+        replaceFragment(detailsShowFragment);
+
         addDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                chooseTypeFragment = new ChooseTypeFragment();
+                replaceFragment(chooseTypeFragment);
             }
         });
     }
@@ -43,9 +51,16 @@ public class ItineryDetailsActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_container, fragment);
-        fragmentTransaction.addToBackStack(fragment.toString());
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commitAllowingStateLoss();
+    }
+
+
+    @Override
+    public void sendTicketDetails(PlaneTicketDetailsModel planeTicketDetailsModel) {
+        PlaneData planeData = new PlaneData();
+        planeData.sendingPlaneTicketInfo(planeTicketDetailsModel);
+
     }
 
 }
