@@ -1,109 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/card_background"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp">
-
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="70dp"
-        android:layout_marginBottom="5dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/fromTimeTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/fromtime"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="."/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_format_line_spacing"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="."/>
-        <TextView
-            android:id="@+id/toTomeTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/totime"/>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/border_blue"
+    android:layout_height="wrap_content">
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="4dp"
-            android:elevation="10dp"
-            android:layout_margin="10dp">
+        android:layout_height="wrap_content"
+        android:id="@+id/swipe_layout"
+        app:dragEdge="right"
+        app:mode="same_level">
+        <FrameLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp">
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/number"/>
-                    <TextView
-                        android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/number"/>
-                </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_weight="1"
+                    android:id="@+id/rel_delete">
 
-                <LinearLayout
-                    android:layout_marginTop="15dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/departureTxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/departure"/>
                     <ImageView
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_compare_arrows"/>
-                    <TextView
-                        android:id="@+id/arrivalTxt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/arrival"/>
-
-
-                </LinearLayout>
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/delete_icon_red" />
+                </RelativeLayout>
 
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="70dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fromTimeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/fromtime"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:text="."/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_format_line_spacing"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:text="."/>
+                <TextView
+                    android:id="@+id/toTomeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/totime"/>
 
-    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="5dp"
+                    android:layout_margin="8dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:background="@drawable/border_black"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/number"/>
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/number"/>
+                        </LinearLayout>
 
-</LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/departureTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:text="@string/departure"/>
+                            <ImageView
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/arrivalTxt"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/arrival"/>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center_horizontal"
+                            android:layout_height="20dp">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_compare_arrows"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/fromDateTxt"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"
+                                android:text="@string/departure"/>
+                            <ImageView
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/toDateTxt"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"
+                                android:text="@string/arrival"/>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+</RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

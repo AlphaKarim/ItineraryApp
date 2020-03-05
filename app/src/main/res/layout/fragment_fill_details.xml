@@ -15,17 +15,20 @@
 
         <EditText
             android:id="@+id/numberEdx"
+            android:inputType="number"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_your_info_number"/>
         <EditText
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:id="@+id/departureEdx"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/departure"/>
         <EditText
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             android:id="@+id/arrivalEdx"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -45,6 +48,8 @@
             android:weightSum="2"
             android:layout_height="wrap_content">
             <EditText
+                android:maxLength="5"
+                android:inputType="textPhonetic"
                 android:id="@+id/fromTomeEdx"
                 android:layout_weight="1"
                 android:hint="@string/from"
@@ -53,6 +58,7 @@
                 android:layout_height="wrap_content"/>
 
             <EditText
+                android:maxLength="5"
                 android:id="@+id/toTomeEdx"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
@@ -60,6 +66,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/fromDateEdx"
+            android:inputType="date"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_starting_date"/>
+        <EditText
+            android:id="@+id/toDateEdx"
+            android:inputType="date"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_your_journey_end_date"/>
 
     </LinearLayout>
     <LinearLayout

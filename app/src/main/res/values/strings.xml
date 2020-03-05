@@ -7,7 +7,7 @@
     <string name="enter_your_ticket_number">Enter your ticket Number :</string>
     <string name="number">Number :</string>
     <string name="totime">ToTime</string>
-    <string name="fromtime">fromTime</string>
+    <string name="fromtime">fromtime</string>
     <string name="arrival_time">Arrival Time</string>
     <string name="arrival">Arrival</string>
     <string name="departure_time">Departure Time</string>
@@ -18,4 +18,6 @@
     <string name="timings">Timings :</string>
     <string name="from">From</string>
     <string name="to">To</string>
+    <string name="enter_your_starting_date">Enter your Journey starting Date</string>
+    <string name="enter_your_journey_end_date">Enter your Journey end Date</string>
 </resources>

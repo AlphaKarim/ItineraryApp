@@ -3,70 +3,81 @@ package com.e.itineraryapp.itinerydetails.model;
 import com.e.itineraryapp.itinerydetails.presenter.ItineraryDetailsListener;
 
 public class PlaneTicketDetailsModel {
-    String arraival;
-    String destination;
-    String arraivalTime;
-    String departureTime;
-    int ticketNumber;
+    String arraivalat;
+    String departureat;
+    String fromtime;
+    String totime;
+    String ticketnumber;
+    String fromdate;
+    String todate;
 
-    public PlaneTicketDetailsModel(String arraival, String destination, String arraivalTime, String departureTime, int ticketNumber) {
-        this.arraival = arraival;
-        this.destination = destination;
-        this.arraivalTime = arraivalTime;
-        this.departureTime = departureTime;
-        this.ticketNumber = ticketNumber;
+    public PlaneTicketDetailsModel(String arraivalat, String departureat, String fromtime, String totime, String ticketnumber, String fromdate, String todate) {
+        this.arraivalat = arraivalat;
+        this.departureat = departureat;
+        this.fromtime = fromtime;
+        this.totime = totime;
+        this.ticketnumber = ticketnumber;
+        this.fromdate = fromdate;
+        this.todate = todate;
     }
 
-    public String getArraival() {
-        return arraival;
+    public PlaneTicketDetailsModel(){
+
     }
 
-    public void setArraival(String arraival) {
-        this.arraival = arraival;
+    public String getArraivalat() {
+        return arraivalat;
     }
 
-    public String getDestination() {
-        return destination;
+    public void setArraivalat(String arraivalat) {
+        this.arraivalat = arraivalat;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public String getDepartureat() {
+        return departureat;
     }
 
-    public String getArraivalTime() {
-        return arraivalTime;
+    public void setDepartureat(String departureat) {
+        this.departureat = departureat;
     }
 
-    public void setArraivalTime(String arraivalTime) {
-        this.arraivalTime = arraivalTime;
+    public String getFromtime() {
+        return fromtime;
     }
 
-    public String getDepartureTime() {
-        return departureTime;
+    public void setFromtime(String fromtime) {
+        this.fromtime = fromtime;
     }
 
-    public void setDepartureTime(String departureTime) {
-        this.departureTime = departureTime;
+    public String getTotime() {
+        return totime;
     }
 
-    public int getTicketNumber() {
-        return ticketNumber;
+    public void setTotime(String totime) {
+        this.totime = totime;
     }
 
-    public void setTicketNumber(int ticketNumber) {
-        this.ticketNumber = ticketNumber;
+    public String getTicketnumber() {
+        return ticketnumber;
     }
 
+    public void setTicketnumber(String ticketnumber) {
+        this.ticketnumber = ticketnumber;
+    }
 
-    class sendData implements ItineraryDetailsListener {
+    public String getFromdate() {
+        return fromdate;
+    }
 
+    public void setFromdate(String fromdate) {
+        this.fromdate = fromdate;
+    }
 
+    public String getTodate() {
+        return todate;
+    }
 
-        @Override
-        public void sendTicketDetails(PlaneTicketDetailsModel planeTicketDetailsModel) {
-
-        }
-
-        //API call
+    public void setTodate(String todate) {
+        this.todate = todate;
     }
 }

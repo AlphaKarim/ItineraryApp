@@ -3,4 +3,18 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="black">#000000</color>
+    <color name="green">#96CA50</color>
+    <color name="light_grey">#F4F4F4</color>
+    <color name="red">#D0011B</color>
+    <color name="dard_red">#d0021b</color>
+    <color name="dark_grey">#6a6a6a</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#ececec</color>
+    <color name="grey1">#a7aaae</color>
+    <color name="transparent">#0000ffff</color>
+    <color name="light_orange">#ffeea9</color>
+    <color name="dark_orange">#f6a623</color>
+    <color name="card_subtle_background">#E9E9E7</color>
+    <color name="card_background">#f8f8f7</color>
 </resources>

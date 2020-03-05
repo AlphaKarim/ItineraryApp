@@ -18,12 +18,15 @@ import com.e.itineraryapp.itinerydetails.model.PlaneData;
 import com.e.itineraryapp.itinerydetails.model.PlaneTicketDetailsModel;
 import com.e.itineraryapp.itinerydetails.presenter.ItineraryDetailsListener;
 
+import java.util.ArrayList;
+
 public class ItineryDetailsActivity extends AppCompatActivity implements ItineraryDetailsListener {
 
     public ImageView addDetails;
     FrameLayout frame_container;
     ChooseTypeFragment chooseTypeFragment;
     DetailsShowFragment detailsShowFragment;
+    PlaneData planeData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,9 @@ public class ItineryDetailsActivity extends AppCompatActivity implements Itinera
 
     }
     public void initializeViews(){
+        planeData = new PlaneData();
         addDetails = findViewById(R.id.addButton);
+        addDetails.setVisibility(View.GONE);
         frame_container = findViewById(R.id.frame_container);
         detailsShowFragment = new DetailsShowFragment();
         replaceFragment(detailsShowFragment);
@@ -58,9 +63,7 @@ public class ItineryDetailsActivity extends AppCompatActivity implements Itinera
 
     @Override
     public void sendTicketDetails(PlaneTicketDetailsModel planeTicketDetailsModel) {
-        PlaneData planeData = new PlaneData();
         planeData.sendingPlaneTicketInfo(planeTicketDetailsModel);
 
     }
-
 }
